@@ -1,0 +1,9 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Cela garantit que la hauteur de l'élément s'étend sur toute la hauteur de la fenêtre */
+}
+
+footer {
+  margin-top: auto; /* Place le pied de page en bas de la page */
+}

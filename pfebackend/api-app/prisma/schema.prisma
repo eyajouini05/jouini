@@ -1,0 +1,86 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Products {
+  id          Int     @id @default(autoincrement())
+  title       String  @unique
+  description String?
+  price       Float
+
+  Order      Order[]
+  Category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId Int?
+  review     Review[]
+
+  // Promotion   Promotion? @relation(fields: [promotionId], references: [id])
+  // promotionId Int?
+}
+
+model users {
+  id       Int    @id @default(autoincrement())
+  fullname String
+
+  Bookmark      Bookmark?    @relation(fields: [bookmarkId], references: [id])
+  bookmarkId    Int?
+  Reclamation   Reclamation? @relation(fields: [reclamationId], references: [id])
+  reclamationId Int?
+}
+
+model Order {
+  id          Int        @id @default(autoincrement())
+  orderNumber String     @unique
+  price       Float
+  products    Products[]
+}
+
+model Category {
+  id          Int        @id @default(autoincrement())
+  name        String     @unique
+  description String?
+  products    Products[]
+}
+
+model Review {
+  id      Int    @id @default(autoincrement())
+  title   String
+  content String
+  rating  Int
+
+  Products   Products? @relation(fields: [productsId], references: [id])
+  productsId Int?
+}
+
+model Bookmark {
+  id    Int     @id @default(autoincrement())
+  users users[]
+}
+
+model Reclamation {
+  id          Int     @id @default(autoincrement())
+  title       String
+  description String
+  status      String
+  users       users[]
+}
+
+model Promotion {
+  id          Int        @id @default(autoincrement())
+  code        String     @unique
+  description String
+  discount    Float
+  startDate   DateTime
+  endDate     DateTime
+  // products    Products[]
+}
