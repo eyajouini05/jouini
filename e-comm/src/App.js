@@ -6,34 +6,39 @@ import Footer from './layouts/Footer'
 
 import About from "./pages/About"
 import Review from"./pages/Review";
+import { Outlet } from "react-router-dom";
 
 
-import ContactUs from'./pages/Contact Us';
 import Login from './auth/Login';
 import SignUp from'./auth/Signup';
-import Product from'./layouts/Product';
+import Products from'./layouts/Products';
 import Cart from'./layouts/Cart';
 import Home from'./pages/Home';
 import Hero from './assets/hero/Hero';
+import Productlist from './pages/Product list';
+import Quote from"./pages/Quote";
+
+import { Provider } from 'react-redux'
+import {store} from "./store"
 
 export default function App() {
   return (
+    <Provider store={store}>
    <div>
-{/* <Navbar/> */}
-{/* <Login/> */}
-{/* <Footer/> */}
+<Navbar/>
+{/* <Hero/> */}
 
+<Outlet />
+<Footer/>
+{/* <Login/> */}
 {/* <SignUp/> */}
 {/* <ContactUs/> */}
 {/* <About/> */}
-{/* <Hero/> */}
 {/* <Review/> */}
-{/* <Home/> */}
-
-<Cart/>
-{/* <Product/> */}
-
+{/* <Quote/> */}
+{/* <Productlist/> */}
+{/* <Review/> */}
 </div>
-
+</Provider>
   )
 }

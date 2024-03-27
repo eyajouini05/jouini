@@ -17,20 +17,20 @@ function Nav() {
           <li><a href="#blog" className="nav-link">Blog</a></li>
           <li><a href="#contact" className="nav-link">Contact</a></li>
         </ul>
-        
-        <div className='nav-login-cart '>
-<button type="button" class="btn btn-primary position-relative align-items-center ">
-<FiShoppingCart />
-  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-    0
 
-  </span>
-</button>
-    <button className='btn btn-success mx-4'>login</button>
- 
-    </div>
+        <div className='nav-login-cart '>
+          <button type="button" class="btn btn-primary position-relative align-items-center ">
+            <FiShoppingCart />
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+
+            </span>
+          </button>
+          <button className='btn btn-success mx-4'>login</button>
+
+        </div>
       </div>
-      
+
     </nav>
   );
 }

@@ -1,14 +1,22 @@
-import React from 'react';
-import './Hero.css'; // Import CSS file for styling
 
-function Hero() {
+import React from 'react';
+import './Hero.css'; 
+
+const Hero = () => {
   return (
     <div className="hero-container">
-      <h1>Welcome to our Website</h1>
-      <p>Discover amazing products and services!</p>
-      <button className="btn btn-primary">Explore Now</button>
+      <div className="hero-content">
+        <div className="left-section">
+          <h2>New Products</h2>
+          <p>Discover our latest arrivals.</p>
+          <button>Shop Now</button>
+        </div>
+        <div className="right-section">
+      
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default Hero;

@@ -1,52 +1,59 @@
+body {
+  margin: 0; 
+  padding: 0; 
+}
+
 .hero-container {
-    background-image: url('https://blogstatic.beautytocare.com/wp-content/uploads/2021/12/best-korean-skincare-products.png');
+  background-image: url('https://www.shutterstock.com/image-photo/highquality-crop-photo-skincare-cosmetics-260nw-2337578359.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Set the height to fill the viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* Text color */
+}
 
-    
-    color: #fff;
-    text-align: center;
-    padding: 230px 230px;
-      background-size: cover; /* Cover the entire container */
-        background-position: center bottom; 
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px; /* Adjust as needed */
+  width: 90%;
+}
 
-        background-repeat: no-repeat;
-        /* Other styles */
-      }
-      
-    
-    
-    
+.left-section {
+  flex: 1;
+  padding: 20px 30px; /* Adjust padding as needed */
+  padding-left: 0; /* Remove left padding */
+}
 
-  
-  
-  .hero-container h1 {
-    font-size: 3rem;
-   
-    margin-bottom: 20px;
-    color: black; 
-  }
-  
-  .hero-container p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    color: black;
+.right-section {
+  flex: 1;
+}
 
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  body {
-    padding: 0;
-    margin: 0; /* Optionally, set margin to 0 to ensure no margins around the body */
-  }
+.left-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.left-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.left-section button {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.left-section button:hover {
+  background-color: #007bff;
+  color: #fff;
+}

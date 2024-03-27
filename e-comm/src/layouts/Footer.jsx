@@ -9,7 +9,7 @@ import { FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <MDBFooter style={{ backgroundColor: '#efd9d1' }} className='text-center text-lg-start text-muted position-fixed bottom-0 w-100'>
+        <MDBFooter style={{ backgroundColor: '#efd9d1' }} className='text-center text-lg-start text-muted w-100'>
             <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                 {/* <div className='me-5 d-none d-lg-block'>
           <span>Get connected with us on social networks:</span>
