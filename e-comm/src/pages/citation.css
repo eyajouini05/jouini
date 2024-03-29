@@ -1,0 +1,13 @@
+.background-image1 {
+  background-image: url('https://dermaskinshop.com.my/cdn/shop/articles/Blog_Post_750_x_427px_5.png?v=1673844352');
+  background-size: cover;
+  background-position: center;
+  height: 70vh; /* Ajustez la hauteur selon vos besoins */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Couleur du texte */
+  text-align: center; /* Alignement du texte */
+}
+

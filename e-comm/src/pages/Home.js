@@ -3,10 +3,14 @@ import './Home.css'
 import Hero from "../assets/hero/Hero";
 import About from "../pages/About";
 import Trendingproducts from "../pages/TrendingProducts";
-import Productlist from '../pages/Product list';
+import Productlist from './Productlist';
 
 import Quote from "../pages/Quote";
-import Reviews from './Review';
+import Review from './Review';
+import Citation from './citation';
+import Sidebar from '../layouts/Sidebar';
+
+
 
 
 
@@ -15,13 +19,15 @@ function Home() {
   return (
     <div>
       <Hero />
+      {/* <Sidebar/> */}
       <Trendingproducts />
-      <Productlist />
-      <Quote />
-      <Reviews />
-
-
+      <Productlist/>
+    
+      <Citation/>
       <About />
+      <Review/>
+
+
 
 
     </div>

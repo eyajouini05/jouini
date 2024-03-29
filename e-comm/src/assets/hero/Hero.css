@@ -1,4 +1,4 @@
-body {
+/* /* /* body {
   margin: 0; 
   padding: 0; 
 }
@@ -7,25 +7,25 @@ body {
   background-image: url('https://www.shutterstock.com/image-photo/highquality-crop-photo-skincare-cosmetics-260nw-2337578359.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Set the height to fill the viewport */
+  height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff; /* Text color */
+  color: #fff; 
 }
 
 .hero-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px; /* Adjust as needed */
+  max-width: 1200px; 
   width: 90%;
 }
 
 .left-section {
   flex: 1;
-  padding: 20px 30px; /* Adjust padding as needed */
-  padding-left: 0; /* Remove left padding */
+  padding: 20px 30px; 
+  padding-left: 0; 
 }
 
 .right-section {
@@ -56,4 +56,64 @@ body {
 .left-section button:hover {
   background-color: #007bff;
   color: #fff;
+} */
+
+
+
+/* .slider-container {
+  width: 400px;
 }
+
+.slider-slide {
+  justify-content: center;
+  align-items: center;
+}
+
+
+.slider-slide img {
+  width: 100%;
+  height: auto; 
+  object-fit: cover; 
+}
+.hero-container {
+  background-image: url('https://www.shutterstock.com/image-photo/highquality-crop-photo-skincare-cosmetics-260nw-2337578359.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+} */
+
+
+.hero {
+  width: 100%;
+  height: 100vh; 
+  position: relative;
+}
+
+img {
+  width: 1450px; 
+  height: 560px; 
+  object-fit: cover; 
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+  z-index: 1;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-next {
+  right: 20px;
+}  

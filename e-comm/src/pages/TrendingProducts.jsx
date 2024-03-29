@@ -1,60 +1,148 @@
-import React from 'react';
-import './TrendingProducts.css'; 
+import React from "react";
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBIcon,
+  MDBBtn,
+  MDBRipple,
+} from "mdb-react-ui-kit";
 
-const TrendingProducts = () => {
-
-  const trendingProducts = [
-    
-    {
-      id: 2,
-      name: "Cleanser",
-      description: "face cleanser",
-      image: "https://www.sephora.com/productimages/sku/s1855709-main-zoom.jpg?imwidth=166"
-    },
-    {
-      id: 3,
-      name: "eye serum",
-      description: "eye cream",
-      image: "https://www.sephora.com/productimages/sku/s2742674-main-zoom.jpg?imwidth=160"
-    },
-    {
-      id: 4,
-      name: "serum",
-      description: "cream",
-      image: "https://www.sephora.com/productimages/sku/s1966258-main-zoom.jpg?imwidth=166"
-    },
-    {
-      id: 4,
-      name: "serum",
-      description: "cream",
-      image: "https://www.sephora.com/productimages/sku/s1855709-main-zoom.jpg?imwidth=166"
-    },
-    {
-      id: 4,
-      name: "serum",
-      description: "cream",
-      image: "https://www.sephora.com/productimages/sku/s2266708-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=166"
-    },
-    
-    
-   
-  ];
-
+function App() {
   return (
-    <div className="trending-products-container">
-      <h2>Trending Products</h2>
-      <div className="product-list">
-        {trendingProducts.map(product => (
-          <div className="product" key={product.id}>
-            <img src={product.image} alt={product.name} />
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <button className="btn btn-primary">View Details</button>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+    <MDBContainer fluid className="my-5 text-center">
+      <h4 className="mt-4 mb-5">
+      <h4 className="mt-4 mb-5 display-4"><strong>Best Sellers</strong></h4>
 
-export default TrendingProducts;
+        
+      </h4>
+
+      <MDBRow>
+       
+        
+        <MDBCol md="12" lg="4" className="mb-4">
+          <MDBCard>
+            <MDBRipple
+              rippleColor="light"
+              rippleTag="div"
+              className="bg-image rounded hover-zoom"
+            >
+              <MDBCardImage
+              
+                src="https://koreanskincare.nl/cdn/shop/files/BHA-5_720x.jpg?v=1685451353p"
+                fluid
+                style={{ width: "200px", height: "200px" }}
+              />
+              <a href="#!">
+                <div className="mask">
+                  <div className="d-flex justify-content-start align-items-end h-100">
+                    <h5>
+                   
+                      <span className="badge bg-danger ms-2">-10%</span>
+                    </h5>
+                  </div>
+                </div>
+                <div className="hover-overlay">
+                  <div
+                    className="mask"
+                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                  ></div>
+                </div>
+              </a>
+            </MDBRipple>
+            <MDBCardBody>
+              <a href="#!" className="text-reset">
+                <h5 className="card-title mb-3">Corsx</h5>
+              </a>
+              
+              <h6 className="mb-3">
+                <s>$61.99</s>
+                <strong className="ms-2 text-danger">$50.99</strong>
+              </h6>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+        <MDBCol md="6" lg="4" className="mb-4">
+          <MDBCard>
+            <MDBRipple
+              rippleColor="light"
+              rippleTag="div"
+              className="bg-image rounded hover-zoom"
+            >
+              <MDBCardImage
+                src="https://koreanskincare.nl/cdn/shop/files/0O8A9851800_720x.jpg?v=1685458460"
+                fluid
+                style={{ width: "300px", height: "200px" }}
+              />
+              <a href="#!">
+                <div className="mask">
+                  <div class="d-flex justify-content-start align-items-end h-100"></div>
+                </div>
+                <div className="hover-overlay">
+                  <div
+                    className="mask"
+                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                  ></div>
+                </div>
+              </a>
+            </MDBRipple>
+            <MDBCardBody>
+              <a href="#!" className="text-reset">
+                <h5 className="card-title mb-3">beauty of joseon</h5>
+              </a>
+              
+              <h6 className="mb-3">$61.99</h6>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+        <MDBCol md="6" lg="4" className="mb-4">
+          <MDBCard>
+            <MDBRipple
+              rippleColor="light"
+              rippleTag="div"
+              className="bg-image rounded hover-zoom"
+            >
+              <MDBCardImage
+                src="https://koreanskincare.nl/cdn/shop/products/secret_key_Lemon_Sparkling_Peeling_Gel_beauty_korean_skincare_nederlands_1_570x.jpg?v=1578734221"
+                fluid
+                style={{ width: "220px", height: "200px" }}
+              />
+              <a href="#!">
+                <div className="mask">
+                  <div class="d-flex justify-content-start align-items-end h-100">
+                    <h5>
+                      <span className="badge bg-primary ms-2">New</span>
+               
+                      <span className="badge bg-danger ms-2">-10%</span>
+                    </h5>
+                  </div>
+                </div>
+                <div className="hover-overlay">
+                  <div
+                    className="mask"
+                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+                  ></div>
+                </div>
+              </a>
+            </MDBRipple>
+            <MDBCardBody>
+              <a href="#!" className="text-reset">
+                <h5 className="card-title mb-3">La neige</h5>
+              </a>
+              
+              <h6 className="mb-3">
+                <s>$61.99</s>
+                <strong className="ms-2 text-danger">$50.99</strong>
+              </h6>
+            </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
+  );
+}
+
+export default App;

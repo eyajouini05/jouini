@@ -129,3 +129,44 @@ export default function Footer() {
         </MDBFooter>
     );
 }
+
+
+// import React from 'react';
+// import './Footer.css'; // Fichier CSS pour styliser le footer
+
+// const Footer = () => {
+//   return (
+//     <footer className="footer">
+//       <div className="footer-container">
+//         <div className="footer-column">
+//           <h3>Contact</h3>
+//           <p>Adresse: 123 Rue Principale, Ville, Pays</p>
+//           <p>Téléphone: +123 456 789</p>
+//           <p>Email: contact@example.com</p>
+//         </div>
+//         <div className="footer-column">
+//           <h3>Liens rapides</h3>
+//           <ul>
+//             <li><a href="#">Accueil</a></li>
+//             <li><a href="#">Produits</a></li>
+//             <li><a href="#">À propos</a></li>
+//             <li><a href="#">Contact</a></li>
+//           </ul>
+//         </div>
+//         <div className="footer-column">
+//           <h3>Réseaux sociaux</h3>
+//           <ul>
+//             <li><a href="#">Facebook</a></li>
+//             <li><a href="#">Twitter</a></li>
+//             <li><a href="#">Instagram</a></li>
+//           </ul>
+//         </div>
+//       </div>
+//       <div className="footer-bottom">
+//         <p>&copy; {new Date().getFullYear()} MonSite.com. Tous droits réservés.</p>
+//       </div>
+//     </footer>
+//   );
+// }
+
+// export default Footer;

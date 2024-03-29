@@ -1,44 +1,39 @@
-/* Style for the container of the reviews */
-.reviews-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Style for individual review */
-  .review {
-    margin-bottom: 20px;
+.reviews-section {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  }
-  
-  /* Style for the name of the reviewer */
-  .review-name {
-    font-weight: bold;
-    
-  }
-  
-  /* Style for the stars */
-  .star-rating {
-    margin-bottom: 10px;
-  }
-  
-  .star {
-    color: #ffc107; /* Color for filled star */
-  }
-  
-  /* Style for the comment */
-  .review-comment {
-    color: #555;
-  }
-/* Style for the title "Custom Reviews" */
-.customer-reviews-title {
-    color:black; /* Nouvelle couleur du texte */
-  }
-  
- 
-  
-  
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.review {
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-name {
+  font-weight: bold;
+}
+
+.review-rating {
+  color: #ffc107; /* Couleur des étoiles */
+  font-size: 1em;
+}
+
+.review-comment {
+  color: #333;
+  font-size: 0.9em;
+}
