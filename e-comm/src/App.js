@@ -3,29 +3,37 @@ import './App.css';
 
 import Navbar from './layouts/Navbar'
 import Footer from './layouts/Footer'
+import Testimonial from './pages/Testimonials';
 
 import About from "./pages/About"
-import Review from "./pages/Review";
+
 import { BrowserRouter, Outlet } from "react-router-dom";
 
 
 import Login from './auth/Login';
 import SignUp from './auth/Signup';
-import Products from './layouts/Products';
+
 import Cart from './layouts/Cart';
 import Home from './pages/Home';
-import Hero from './assets/hero/Hero';
-import Productlist from './pages/Productlist';
-import Quote from "./pages/Quote";
+
+
+import Quote from "./pages/Productsales";
 
 
 import { Provider } from 'react-redux'
 import { store } from "./store"
-import TrendingProducts from './pages/TrendingProducts';
+
 import Contact from "./pages/Contact";
 import CusNavbar from './layouts/Navbar';
+import Featuredproducts from './components/ProductDetail';
+import Slider from "./pages/Slider";
+// import Productsales from './pages/Productsales';
+import Trendingproducts from"./pages/Trendingproducts";
+import Blog from"./pages/Blog";
+import Addtocard from"./components/ProductDetail";
+import Testimonials from './pages/Testimonials';
 
-
+import Category from"./pages/Category";
 
 export default function App() {
   return (
@@ -34,22 +42,19 @@ export default function App() {
 
     <Provider store={store}>
       <div>
-        <CusNavbar />
-        {/* <Hero/> */}
-
+        {/* <Cart/> */}
+        {/* <Addtocard/> */}
+  <CusNavbar />
+{/* <Testimonials/> */}
+{/* <Category/> */}
         <Outlet />
         <Footer />
-        {/* <Login/> */}
-        {/* <SignUp/> */}
-
-        {/* <About/> */}
-        {/* <Review/> */}
-        {/* <Quote/> */}
-        {/* <Productlist/> */}
-        {/* <TrendingProducts/> */}
-        {/* <Contact/> */}
-
-
+  {/* <Slider/> */}
+{/* <Blog/> */}
+{/* <Featuredproducts/> */}
+{/* <Trendingproducts/> */}
+{/* <About/> */}
+{/* <Addtocard/> */}
       </div>
     </Provider>
 

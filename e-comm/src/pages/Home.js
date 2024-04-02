@@ -1,34 +1,40 @@
 import React from 'react';
 import './Home.css'
-import Hero from "../assets/hero/Hero";
+
 import About from "../pages/About";
-import Trendingproducts from "../pages/TrendingProducts";
-import Productlist from './Productlist';
-
-import Quote from "../pages/Quote";
-import Review from './Review';
-import Citation from './citation';
-import Sidebar from '../layouts/Sidebar';
 
 
 
 
 
+import Citation from './Blog';
+import Featuredproducts from '../components/ProductDetail';
+import Slider from "./Slider";
+
+import Testimonials from './Testimonials';
+
+import Blog from "./Blog";
+import Trendingproducts from './Trendingproducts';
+
+import Productsales from './Productsales';
+import Category from './Category';
+import Category2 from './Category2';
+import Contact from './Contact';
 
 function Home() {
   return (
     <div>
-      <Hero />
-      {/* <Sidebar/> */}
+
+      <Slider />
       <Trendingproducts />
-      <Productlist/>
-    
-      <Citation/>
+      <Category />
+      <Category2 />
+
+      <Productsales />
       <About />
-      <Review/>
-
-
-
+      <Testimonials />
+      <Blog />
+      <Contact />
 
     </div>
   );

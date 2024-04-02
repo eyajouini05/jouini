@@ -1,56 +1,69 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import './About.css'; 
 
-function AboutPage() {
- 
-    return (
-        <Container className="mt-5">
-            <Row>
-                <Col md={6}>
-                    <h2>About Us</h2>
-                    <p>
-                    Chez K-GLOW, nous sommes passionnés par la promotion de la beauté naturelle et la santé de votre peau. Fondée par des experts en soins de la peau, notre entreprise s'engage à fournir des produits de qualité supérieure inspirés par la richesse de la tradition coréenne en matière de soins de la peau.
-</p>
-<Row className="mt-5">
-                <Col>
-                    <h2>Our Mission</h2>
-                    <p>
-                        Our mission is to provide high-quality skincare products that are effective, natural, and affordable. We believe in promoting healthy skin 
-                        through gentle and nourishing formulations that address various skin concerns. 
-                    </p>
-                    <p>
-                        We are dedicated to promoting self-care and confidence through our products, empowering individuals to embrace their natural beauty.
-                    </p>
+function App() {
+  return (
+    
+    <div className="App">
+    
+      <section id="home">
+        <div className="home-left">
+          <img src='https://umma.io/wp-content/uploads/2023/04/1597615_UMMABlog1_1000x1200_033123.jpg'>
+          </img>
+         
+        </div>
+        
+        <div className="home-right">
+          <h2 className="home-heading"> K-Glow </h2>
+          <p className="home-para">LK-Glow est une marque de produits de soins de la peau qui se concentre sur la création de solutions innovantes et efficaces pour améliorer la santé et l'apparence de la peau. Fondée sur une approche scientifique et axée sur les résultats, K-Glow s'engage à offrir des produits de haute qualité qui répondent aux besoins variés des consommateurs en matière de soins de la peau.</p>
+   
+        </div>
+      </section>
 
-                    Our team of skincare experts is dedicated to researching and developing innovative formulas
-                        that address various skin concerns, from hydration and anti-aging to acne and sensitivity.
-                        We are committed to promoting healthy skincare habits and empowering individuals to feel confident
-                        in their skin.
-                </Col>
-            </Row>
+      <section id="workFlow">
+        <h2 className="heading"> Thank you for choosing us  </h2>
+        <p className="para">
+           <br /> Thank you for your continued loyalty and partnership
+           <br />  We look forward to serving you again in the future.</p>
+        <div className="num-container">
+          <div className="num-item"><span>27,882 <br />Customers</span></div>
+          <div className="num-item"><span>90% <br />Action Plans</span></div>
+          <div className="num-item"><span>70,592 <br />Downloads</span></div>
+        </div>
+      </section>
 
-                    
-                </Col>
-                <Col md={6}>
-                    <img src="https://umma.io/wp-content/uploads/2023/04/1597615_UMMABlog1_1000x1200_033123.jpg" alt="About Us" className="img-fluid" style={{maxwidth:'10' ,maxheight:'10'}} />
-                </Col>
-            </Row>
-            {/* <Row className="mt-5">
-                <Col>
-                    <h2>Our Co-Founder</h2>
-                </Col>
-            </Row> */}
-            {/* <Row>
-                <Col md={4}>
-                    <img src="https://scontent.ftun16-1.fna.fbcdn.net/v/t1.15752-9/432342052_1117879186080272_7739329859748240227_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=kAIiiVX_6WUAX9MY09n&_nc_ht=scontent.ftun16-1.fna&oh=03_AdRR4YJBFgDiECpAZDc2HJ8-xAKchVqx9MdLI6g5M3-OQQ&oe=661CEDA9" alt="Co-Founder 1" className="img-fluid"  />
-                    <h3></h3>
-                    <p>Co-Founder</p>
-                    <p>Jouini Eya </p>
-                </Col>
-                </Row> */}
-            
-        </Container>
-    );
+     
+
+      <section id="our-Team">
+        <h2>Our Member</h2>
+        <div className="teamContainer">
+          <div className="team-item">
+            <img src='https://scontent.ftun16-1.fna.fbcdn.net/v/t39.30808-6/414495882_2336161846579155_2915138723357318010_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=m8AvGPnf9X8AX-uzX_n&_nc_ht=scontent.ftun16-1.fna&oh=00_AfCxvdcdgAnEFJPtxDqhdHVWmCoEy-A9BnLSsr8xLhbuog&oe=660FDA8A'>
+            </img>
+     
+            <h5 className="member-name">Jouini Eya</h5>
+            <span className="role">Co-Founder</span>
+          </div>
+          <div className="team-item">
+          <img src='https://scontent.ftun16-1.fna.fbcdn.net/v/t39.30808-6/376730335_1815847255513728_3693653158964586519_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-F56VpAYciIAX_uz6v8&_nc_ht=scontent.ftun16-1.fna&oh=00_AfB-jhONl9VGUA0TE8Pl3qBwJUQKWf6lqOzW0ji9FQsWnQ&oe=660FCB30'/>
+         
+            <h5 className="member-name">Khabouchi Rawaa</h5>
+            <span className="role">seo expert</span>
+          </div>
+          <div className="team-item">
+            <img src='https://scontent.ftun16-1.fna.fbcdn.net/v/t39.30808-6/331077014_1199203944295261_8523133215185294315_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=7s9mnOI5GAMAX_MCBSd&_nc_ht=scontent.ftun16-1.fna&oh=00_AfDwqOUzj8yWNgc2girNjjnwrEu3wZksBC2xIaP2ZEGc7Q&oe=660FC053'>
+            </img>
+           
+            <h5 className="member-name">Chebbi Eya</h5>
+            <span className="role">seo expert</span>
+          </div>
+          
+        </div>
+      </section>
+
+      
+    </div>
+  );
 }
 
-export default AboutPage;
+export default App;

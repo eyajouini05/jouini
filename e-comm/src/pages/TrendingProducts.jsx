@@ -1,148 +1,107 @@
-import React from "react";
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBIcon,
-  MDBBtn,
-  MDBRipple,
-} from "mdb-react-ui-kit";
+import React from 'react';
+import './Trendingproducts.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from 'react-router-dom';
 
-function App() {
-  return (
-    <MDBContainer fluid className="my-5 text-center">
-      <h4 className="mt-4 mb-5">
-      <h4 className="mt-4 mb-5 display-4"><strong>Best Sellers</strong></h4>
 
-        
-      </h4>
+function Trendingproducts() {
+const navigate=useNavigate()
+    return (
+        <div>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-      <MDBRow>
-       
-        
-        <MDBCol md="12" lg="4" className="mb-4">
-          <MDBCard>
-            <MDBRipple
-              rippleColor="light"
-              rippleTag="div"
-              className="bg-image rounded hover-zoom"
-            >
-              <MDBCardImage
-              
-                src="https://koreanskincare.nl/cdn/shop/files/BHA-5_720x.jpg?v=1685451353p"
-                fluid
-                style={{ width: "200px", height: "200px" }}
-              />
-              <a href="#!">
-                <div className="mask">
-                  <div className="d-flex justify-content-start align-items-end h-100">
-                    <h5>
-                   
-                      <span className="badge bg-danger ms-2">-10%</span>
-                    </h5>
-                  </div>
+            <div class="container">
+
+
+                <h3 class="h3">Trending now </h3>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid6">
+                            <div class="product-image6">
+                                <a href="#/">
+                                    <img class="pic-1" src="https://ohlolly.com/cdn/shop/products/Ohlolly_Manyo-Pure-Cleansing-Oil-1_700x.jpg?v=1625090623" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#/">Clarifying Oil Cleanser</a></h3>
+                                <div class="price">$11.00
+                                    <span>$14.00</span>
+                                </div>
+                            </div>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid6">
+                            <div class="product-image6">
+                                <a href="#/">
+                                    <img class="pic-1" src="https://ohlolly.com/cdn/shop/products/Ohlolly-Cosrx-AHA-Whitening-Power-Liquid_700x.jpg?v=1568737121" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#/">AHA 7 Whitehead Power Liquid</a></h3>
+                                <div class="price">$8.00
+                                    <span>$12.00</span>
+                                </div>
+                            </div>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid6">
+                            <div class="product-image6">
+                                <a href="#/">
+                                    <img class="pic-1" src="https://ohlolly.com/cdn/shop/products/Ohlolly_Hyeja_MatchaMudMask_2_700x.jpg?v=1671855265" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#/">Vegan Matcha Gentle Mud Cream Mask</a></h3>
+                                <div class="price">$11.00
+                                    <span>$14.00</span>
+                                </div>
+                            </div>
+                            <ul class="social">
+                                <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="product-grid6">
+                            <div class="product-image6">
+                                <a href="#/">
+                                    <img class="pic-1" src="https://ohlolly.com/cdn/shop/products/Ohlolly_PKY_MoistureSerum_700x.jpg?v=1670474228" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="title"><a href="#/">Moisture Serum</a></h3>
+                                <div class="price">$11.00
+                                    <span>$14.00</span>
+                                </div>
+                            </div>
+                            <ul class="social">
+                                <li onClick={()=>navigate("productDetail")}><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                                <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                                <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div className="hover-overlay">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  ></div>
-                </div>
-              </a>
-            </MDBRipple>
-            <MDBCardBody>
-              <a href="#!" className="text-reset">
-                <h5 className="card-title mb-3">Corsx</h5>
-              </a>
-              
-              <h6 className="mb-3">
-                <s>$61.99</s>
-                <strong className="ms-2 text-danger">$50.99</strong>
-              </h6>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-        <MDBCol md="6" lg="4" className="mb-4">
-          <MDBCard>
-            <MDBRipple
-              rippleColor="light"
-              rippleTag="div"
-              className="bg-image rounded hover-zoom"
-            >
-              <MDBCardImage
-                src="https://koreanskincare.nl/cdn/shop/files/0O8A9851800_720x.jpg?v=1685458460"
-                fluid
-                style={{ width: "300px", height: "200px" }}
-              />
-              <a href="#!">
-                <div className="mask">
-                  <div class="d-flex justify-content-start align-items-end h-100"></div>
-                </div>
-                <div className="hover-overlay">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  ></div>
-                </div>
-              </a>
-            </MDBRipple>
-            <MDBCardBody>
-              <a href="#!" className="text-reset">
-                <h5 className="card-title mb-3">beauty of joseon</h5>
-              </a>
-              
-              <h6 className="mb-3">$61.99</h6>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-        <MDBCol md="6" lg="4" className="mb-4">
-          <MDBCard>
-            <MDBRipple
-              rippleColor="light"
-              rippleTag="div"
-              className="bg-image rounded hover-zoom"
-            >
-              <MDBCardImage
-                src="https://koreanskincare.nl/cdn/shop/products/secret_key_Lemon_Sparkling_Peeling_Gel_beauty_korean_skincare_nederlands_1_570x.jpg?v=1578734221"
-                fluid
-                style={{ width: "220px", height: "200px" }}
-              />
-              <a href="#!">
-                <div className="mask">
-                  <div class="d-flex justify-content-start align-items-end h-100">
-                    <h5>
-                      <span className="badge bg-primary ms-2">New</span>
-               
-                      <span className="badge bg-danger ms-2">-10%</span>
-                    </h5>
-                  </div>
-                </div>
-                <div className="hover-overlay">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  ></div>
-                </div>
-              </a>
-            </MDBRipple>
-            <MDBCardBody>
-              <a href="#!" className="text-reset">
-                <h5 className="card-title mb-3">La neige</h5>
-              </a>
-              
-              <h6 className="mb-3">
-                <s>$61.99</s>
-                <strong className="ms-2 text-danger">$50.99</strong>
-              </h6>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
-  );
+            </div>
+            <hr />
+
+
+            <hr />
+        </div>
+    );
 }
-
-export default App;
+export default Trendingproducts;

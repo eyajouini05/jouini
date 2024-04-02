@@ -86,17 +86,31 @@ import { CiShoppingCart } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import { NavLink } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import logo from"../assets/K-Glow (3).png";
+import { FaSearch } from "react-icons/fa"; // Importer l'icône de recherche
+
+
+
 
 
 function CusNavbar() {
 
   const navigate = useNavigate()
 
+
+  const handleSearchClick = () => {
+    // Ajoutez ici l'action que vous souhaitez déclencher lorsque l'utilisateur clique sur l'icône de recherche
+    console.log("Search clicked!");
+  };
+
   return (
     <Navbar expand="lg" className="" style={{background:"#efd9d130"}}>
     <Container fluid>
       <Navbar.Brand href="#">
-        <img src='https://png.pngtree.com/png-vector/20220708/ourmid/pngtree-skin-care-logo-png-image_5774040.png' alt='logo' style={{width:50,height:50}}/>
+      <div className="navbar-logo">
+         <img src={logo} alt="Logo" width={'49px'}height={'40px'} style={{objectFit:"cover"}}/> 
+      </div>
+        
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
@@ -111,7 +125,7 @@ function CusNavbar() {
           
           
         </Nav>
-        <Form className="d-flex justify-content-center">
+        {/* <Form className="d-flex justify-content-center">
           <Form.Control
             type="search"
             placeholder="Search"
@@ -119,9 +133,17 @@ function CusNavbar() {
             aria-label="Search"
           />
           <Button variant="outline-success">Search</Button>
-        </Form>
-        <CiShoppingCart size={"40"} color='#fa2f6d'/>
-        <CgProfile size={"30"}  onClick={()=>navigate("auth")} />
+        </Form> */}
+        <FaSearch
+            size={"18"}
+            color="black"
+            style={{ cursor: "pointer" }}
+            onClick={handleSearchClick} // Appel de la fonction lorsque l'utilisateur clique sur l'icône
+          />
+        <CiShoppingCart size={"30"} color='black'/>
+        <CgProfile size={"20"} color='black' onClick={()=>navigate("auth")} />
+       
+     
 
       </Navbar.Collapse>
     </Container>
