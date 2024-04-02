@@ -104,7 +104,7 @@ function CusNavbar() {
   };
 
   return (
-    <Navbar expand="lg" className="" style={{background:"#efd9d130"}}>
+    <Navbar expand="lg" className="shadow-sm" style={{background:"#efd9d130"}}>
     <Container fluid>
       <Navbar.Brand href="#">
       <div className="navbar-logo">

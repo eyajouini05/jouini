@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import "./category.css"
-
+import { FaArrowRight } from "react-icons/fa";
 const categories = [
   { id: 1, name: 'Oily skin', image: 'https://thekshop.ca/cdn/shop/collections/cosrxgoodmorningcleanser_1024x1024_d8bbde8a-c3d9-4d69-942f-400e13216a13_535x.jpg?v=1636335052' },
   { id: 2, name: 'Sensitive', image: 'https://thekshop.ca/cdn/shop/collections/IMG_0467_535x.jpg?v=1636335561' },
@@ -19,14 +19,18 @@ const ShopByCategory = () => {
 
   return (
     <Container>
-      <h1 className="text-center mt-5">Shop by skin type</h1>
+      <h1 className="text-center mt-5 ">Shop by skin type</h1>
       <Row className="mt-4 ">
+    
+
         {categories.map((category) => (
           <Col key={category.id} xs={12} md={4} className="mb-4 photoglow">
             <Card style={{ cursor: 'pointer', width: '100%' }} onClick={() => handleCategoryClick(category.id)}>
               <Card.Img variant="top" src={category.image} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-              <Card.Body>
+              <Card.Body className='d-flex justify-content-between align-items-center'>
+
                 <Card.Title>{category.name}</Card.Title>
+                <FaArrowRight />
 
               </Card.Body>
             </Card>
@@ -35,6 +39,8 @@ const ShopByCategory = () => {
             </div>
           </Col>
         ))}
+      
+
       </Row>
     </Container>
 
