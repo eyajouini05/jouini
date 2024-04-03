@@ -29,12 +29,15 @@ model Products {
 }
 
 model users {
+
   id       Int    @id @default(autoincrement())
+  
+  email String@unique
+  mdp String
   fullname String
   age Int
   adresse String
   mobilephone String
-
 
   // Bookmark      Bookmark?    @relation(fields: [bookmarkId], references: [id])
   // bookmarkId    Int?

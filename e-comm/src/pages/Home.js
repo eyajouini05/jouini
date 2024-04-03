@@ -20,6 +20,7 @@ import Productsales from './Productsales';
 import Category from './Category';
 import Category2 from './Category2';
 import Contact from './Contact';
+import Pack from './Pack';
 
 function Home() {
   return (
@@ -31,7 +32,8 @@ function Home() {
       <Category2 />
 
       <Productsales />
-      <About />
+      <Pack/>
+
       <Testimonials />
       <Blog />
       <Contact />

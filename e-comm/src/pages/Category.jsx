@@ -23,22 +23,21 @@ const ShopByCategory = () => {
       <Row className="mt-4 ">
     
 
-        {categories.map((category) => (
-          <Col key={category.id} xs={12} md={4} className="mb-4 photoglow">
-            <Card style={{ cursor: 'pointer', width: '100%' }} onClick={() => handleCategoryClick(category.id)}>
-              <Card.Img variant="top" src={category.image} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
-              <Card.Body className='d-flex justify-content-between align-items-center'>
+      {categories.map((category) => (
+  <Col key={category.id} xs={12} md={4} className="mb-4 photoglow">
+    <Card style={{ cursor: 'pointer', width: '100%', position: 'relative' }} onClick={() => handleCategoryClick(category.id)} className='shadow-sm'>
+      <Card.Img variant="top" src={category.image} style={{ width: '100%', height: '200px', objectFit: 'cover' }} className='img'/>
+      <div className="category-title">
+        <Card.Title>{category.name}</Card.Title>
+        <FaArrowRight />
+      </div>
+    </Card>
+    <div className="glow-wrap">
+      <i className="glow"></i>
+    </div>
+  </Col>
+))}
 
-                <Card.Title>{category.name}</Card.Title>
-                <FaArrowRight />
-
-              </Card.Body>
-            </Card>
-            <div class="glow-wrap">
-              <i class="glow"></i>
-            </div>
-          </Col>
-        ))}
       
 
       </Row>

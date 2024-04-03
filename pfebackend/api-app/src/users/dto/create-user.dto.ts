@@ -1,6 +1,8 @@
 export class CreateUserDto {
+    email:string
+    mdp:string
     fullname :string
-    age:Number
+    age:number
     adresse:string
     mobilephone:string
 }

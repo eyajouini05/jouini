@@ -1,63 +1,76 @@
 import React from 'react';
-import './About.css'; 
+import './About.css'; // Assurez-vous d'avoir le fichier style.css dans votre projet
 
-function App() {
+const AboutUs = () => {
   return (
-    
-    <div className="App">
-    
-      <section id="home">
-        <div className="home-left">
-          <img src='https://umma.io/wp-content/uploads/2023/04/1597615_UMMABlog1_1000x1200_033123.jpg'>
-          </img>
+    <div>
+      
+
+      <section className="about">
+        <h1>About Us</h1>
+        <p style={{ fontWeight: 'bold' }}>K-Glow.....</p>
+        <div className="about-info">
+          <div className="about-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-hIbFZhb54783YzsHHTFR-Hnp5Nd_hiIRAmICpfK3Jg&s" alt="Geeksforgeeks" />
+          </div>
+          <div>
+            <p>Bienvenue sur notre site e-commerce dédié aux produits de soins coréens ! Plongez dans l'univers de la beauté coréenne et découvrez une vaste sélection de produits de soins de la peau provenant directement de Corée du Sud. Notre boutique en ligne offre une expérience de shopping unique, mettant en avant les meilleurs produits de marques réputées pour leur qualité et leur efficacité.</p>
          
+          </div>
         </div>
-        
-        <div className="home-right">
-          <h2 className="home-heading"> K-Glow </h2>
-          <p className="home-para">LK-Glow est une marque de produits de soins de la peau qui se concentre sur la création de solutions innovantes et efficaces pour améliorer la santé et l'apparence de la peau. Fondée sur une approche scientifique et axée sur les résultats, K-Glow s'engage à offrir des produits de haute qualité qui répondent aux besoins variés des consommateurs en matière de soins de la peau.</p>
-   
+      </section>
+      
+      <section className="about">
+        <h1>Our Mission</h1>
+        <p style={{ fontWeight: 'bold' }}>K-Glow.....</p>
+        <div className="about-info">
+          <div className="about-img">
+            <img src="https://timesofindia.indiatimes.com/photo/104473165/104473165.jpg" alt="Geeksforgeeks" />
+          </div>
+          <div>
+            <p>Bienvenue sur notre site e-commerce dédié aux produits de soins coréens ! Plongez dans l'univers de la beauté coréenne et découvrez une vaste sélection de produits de soins de la peau provenant directement de Corée du Sud. Notre boutique en ligne offre une expérience de shopping unique, mettant en avant les meilleurs produits de marques réputées pour leur qualité et leur efficacité.</p>
+         
+          </div>
         </div>
       </section>
 
-      <section id="workFlow">
-        <h2 className="heading"> Thank you for choosing us  </h2>
-        <p className="para">
-           <br /> Thank you for your continued loyalty and partnership
-           <br />  We look forward to serving you again in the future.</p>
-        <div className="num-container">
-          <div className="num-item"><span>27,882 <br />Customers</span></div>
-          <div className="num-item"><span>90% <br />Action Plans</span></div>
-          <div className="num-item"><span>70,592 <br />Downloads</span></div>
-        </div>
-      </section>
 
-     
-
-      <section id="our-Team">
-        <h2>Our Member</h2>
-        <div className="teamContainer">
-          <div className="team-item">
-            <img src='https://scontent.ftun16-1.fna.fbcdn.net/v/t39.30808-6/414495882_2336161846579155_2915138723357318010_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=m8AvGPnf9X8AX-uzX_n&_nc_ht=scontent.ftun16-1.fna&oh=00_AfCxvdcdgAnEFJPtxDqhdHVWmCoEy-A9BnLSsr8xLhbuog&oe=660FDA8A'>
-            </img>
-     
-            <h5 className="member-name">Jouini Eya</h5>
-            <span className="role">Co-Founder</span>
+      <section className="team">
+        <h1>Meet Our Team</h1>
+        <div className="team-cards">
+          {/* Card 1 */}
+          <div className="cardd">
+            <div className="card-img">
+              <img src="https://scontent.ftun14-1.fna.fbcdn.net/v/t39.30808-6/331077014_1199203944295261_8523133215185294315_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=7s9mnOI5GAMAX9I6J5X&_nc_ht=scontent.ftun14-1.fna&oh=00_AfCwGIKkXKNUTI90f1-jeskStm6ujte6qbmw-aBTRbtwCg&oe=66122B13" alt="User 1" />
+            </div>
+            <div className="card-info">
+              <h2 className="card-name">Chebbi Eya</h2>
+              <p className="card-role">CEO and Founder</p>
+            
+            </div>
           </div>
-          <div className="team-item">
-          <img src='https://scontent.ftun16-1.fna.fbcdn.net/v/t39.30808-6/376730335_1815847255513728_3693653158964586519_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-F56VpAYciIAX_uz6v8&_nc_ht=scontent.ftun16-1.fna&oh=00_AfB-jhONl9VGUA0TE8Pl3qBwJUQKWf6lqOzW0ji9FQsWnQ&oe=660FCB30'/>
-         
-            <h5 className="member-name">Khabouchi Rawaa</h5>
-            <span className="role">seo expert</span>
-          </div>
-          <div className="team-item">
-            <img src='https://scontent.ftun16-1.fna.fbcdn.net/v/t39.30808-6/331077014_1199203944295261_8523133215185294315_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=7s9mnOI5GAMAX_MCBSd&_nc_ht=scontent.ftun16-1.fna&oh=00_AfDwqOUzj8yWNgc2girNjjnwrEu3wZksBC2xIaP2ZEGc7Q&oe=660FC053'>
-            </img>
+          {/* Card 2 */}
+          <div className="cardd">
+            <div className="card-img">
+              <img src="https://scontent.ftun14-1.fna.fbcdn.net/v/t39.30808-6/414495882_2336161846579155_2915138723357318010_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=m8AvGPnf9X8AX_gVzWB&_nc_ht=scontent.ftun14-1.fna&oh=00_AfA3xAyypgFoNy4nDgftEciUSJorS3OXI7RGdploP7u-QA&oe=6612454A" alt="User 2" />
+            </div>
+            <div className="card-info">
+              <h2 className="card-name">Jouini Eya</h2>
+              <p className="card-role">Co-Founder</p>
            
-            <h5 className="member-name">Chebbi Eya</h5>
-            <span className="role">seo expert</span>
+            </div>
           </div>
-          
+          {/* Card 3 */}
+          <div className="cardd">
+            <div className="card-img">
+              <img src="https://scontent.ftun14-1.fna.fbcdn.net/v/t39.30808-6/376730335_1815847255513728_3693653158964586519_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=c1cT07Xt6McAX_BwTRb&_nc_ht=scontent.ftun14-1.fna&oh=00_AfDVGWdl_lXg1WpEnZo27R_-_n9Ly1-Q2GdSzdkeKEvHCQ&oe=661235F0" alt="User 3" />
+            </div>
+            <div className="card-info">
+              <h2 className="card-name">Khabouchi Rawaa</h2>
+              <p className="card-role">Co-Founder</p>
+           
+            </div>
+          </div>
         </div>
       </section>
 
@@ -66,4 +79,4 @@ function App() {
   );
 }
 
-export default App;
+export default AboutUs;
