@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { dataProducts, dataorders, datareview, datausers } from './data';
+import { stringify } from 'querystring';
 
 
 // initialize Prisma Client
@@ -42,6 +43,9 @@ async function main() {
         age: user.age,
         adresse: user.adresse,
         mobilephone: user.mobilephone,
+        Password:"string",
+        email:"string",
+
       }
     });
     usersIds.push(users.id)

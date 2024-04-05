@@ -12,11 +12,15 @@ CREATE TABLE `Products` (
 -- CreateTable
 CREATE TABLE `users` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `email` VARCHAR(191) NOT NULL,
+    `mdp` VARCHAR(191) NOT NULL,
     `fullname` VARCHAR(191) NOT NULL,
     `age` INTEGER NOT NULL,
     `adresse` VARCHAR(191) NOT NULL,
     `mobilephone` VARCHAR(191) NOT NULL,
+    `Password` VARCHAR(191) NOT NULL,
 
+    UNIQUE INDEX `users_email_key`(`email`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
@@ -26,7 +30,6 @@ CREATE TABLE `Order` (
     `orderNumber` VARCHAR(191) NOT NULL,
     `price` DOUBLE NOT NULL,
 
-    UNIQUE INDEX `Order_orderNumber_key`(`orderNumber`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
