@@ -1,0 +1,29 @@
+.template-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px; /* Ajoute un espacement entre chaque section */
+  }
+  
+  .text-container {
+    flex: 1; /* Le texte prendra autant d'espace que possible */
+  }
+  
+  .image-container {
+    flex: 1; /* L'image prendra autant d'espace que possible */
+    display: flex;
+    justify-content: flex-end; /* Aligne l'image à droite */
+    align-items: center; /* Centre l'image verticalement */
+  }
+  
+  .image-container img {
+    max-width: 100%; /* L'image s'ajustera à la largeur du conteneur */
+    height: auto;
+    max-height: 200px; /* Limite la hauteur de l'image */
+    margin-right: 20px; /* Ajoute un espacement entre le texte et l'image */
+  }
+  

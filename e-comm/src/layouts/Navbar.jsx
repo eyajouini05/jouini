@@ -1,154 +1,78 @@
-// import React, { useState } from 'react'
-// import './Navbar.css'
-// import { RiShoppingCart2Line } from "react-icons/ri";
-// // import logo from "../assets/K-GLOW.png"
-// import logo from "..//assets/K-GLOW (2).png"
-// import { useNavigate } from 'react-router-dom';
 
-// function Navbar() {
-
-//   const [Menu, setMenu] = useState("shop")
-//   const navigate = useNavigate()
-
-//   return (
-
-//     <div className='navbar'>
-//       <div className='nav-logo'>
-
-//         <img src={logo} alt='logo' style={{ width: 90 }} />
-//         <p>KGlow</p>
-//       </div>
+import React from 'react';
+import { RiUserFill } from "react-icons/ri";
+ import { RiShoppingCart2Fill } from "react-icons/ri";
+ import { RiHeartFill } from "react-icons/ri";
 
 
-//       <ul className='nav-menu'>
-//         <li onClick={() => navigate("Product")}>shop</li>
-//         <li onClick={() => navigate("About")}>About</li>
-//         <li onClick={() => navigate("Cart")}>Cart</li>
-//         <li onClick={() => navigate("Contact")}>Contact</li>
+import "./Navbar.css"
+import * as ReactBootStrap from "react-bootstrap";
+import {
+  BrowserRouter as Router,
+  Link,
+  Navigate,
+  useNavigate
+} from "react-router-dom";
 
-
-
-
-//       </ul>
-
-//       <div className='nav-login-cart '>
-
-//         <button type="button" class="btn  position-relative align-items-center " style={{ background: "blue" }}>
-
-//           <RiShoppingCart2Line />
-//           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-//             0
-
-//           </span>
-//         </button>
-//         <button  onClick={() => navigate("login")} className='btn mx-4' style={{ background: "blue" }}>login  </button>
-
-//       </div>
-//     </div>
-
-
-
-//   )
-// }
-
-// export default Navbar
-
-
-
-// import React from 'react';
-// import './Navbar.css'; // Importer le fichier CSS pour la navbar
-
-// function Navbar() {
-//   return (
-//     <nav className="navbar">
-//       <div className="navbar-logo">Logo</div>
-//       <ul className="navbar-links">
-//         <li className="navbar-link">Accueil</li>
-//         <li className="navbar-link">Produits</li>
-//         <li className="navbar-link">À propos</li>
-//         <li className="navbar-link">Contact</li>
-//       </ul>
-//     </nav>
-//   );
-// }
-
-// export default Navbar;
-
-
-
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { CiShoppingCart } from "react-icons/ci";
-import { CgProfile } from "react-icons/cg";
-import { NavLink } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-import logo from"../assets/K-Glow (3).png";
-import { FaSearch } from "react-icons/fa"; // Importer l'icône de recherche
-
-
-
-
-
-function CusNavbar() {
-
-  const navigate = useNavigate()
-
-
-  const handleSearchClick = () => {
-    // Ajoutez ici l'action que vous souhaitez déclencher lorsque l'utilisateur clique sur l'icône de recherche
-    console.log("Search clicked!");
-  };
-
+const NavBar = () => {
+  const Navigate=useNavigate()
   return (
-    <Navbar expand="lg" className="shadow-sm" style={{background:"#efd9d130"}}>
-    <Container fluid>
-      <Navbar.Brand href="#">
-      <div className="navbar-logo">
-         <img src={logo} alt="Logo" width={'49px'}height={'40px'} style={{objectFit:"cover"}}/> 
-      </div>
+    <div className="App">
+      <ReactBootStrap.Navbar collapseOnSelect expand="xl" bg="white" variant="dark">
+        <ReactBootStrap.Navbar.Brand href="#home" style={{ color: 'pink',fontWeight:'bold',fontSize:"25px" }}>K-Glow</ReactBootStrap.Navbar.Brand>
+
+        <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+          <ReactBootStrap.Nav className="mr-auto">
+          <ReactBootStrap.NavDropdown title="Shop" id="collasible-nav-dropdown" className='blackColor'>
+              <ReactBootStrap.NavDropdown.Item href="#action/3.1">Category</ReactBootStrap.NavDropdown.Item>
+              <ReactBootStrap.NavDropdown.Item href="#action/3.2">Routine</ReactBootStrap.NavDropdown.Item>
+              <ReactBootStrap.NavDropdown.Item href="#action/3.3">Concern</ReactBootStrap.NavDropdown.Item>
+              <ReactBootStrap.NavDropdown.Item href="#action/3.3">Skin Types</ReactBootStrap.NavDropdown.Item>
+              <ReactBootStrap.NavDropdown.Item href="#action/3.3">By price</ReactBootStrap.NavDropdown.Item>
+              <ReactBootStrap.NavDropdown.Divider />
+              <ReactBootStrap.NavDropdown.Item href="#action/3.4">Other</ReactBootStrap.NavDropdown.Item>
+            </ReactBootStrap.NavDropdown>
+            <Link to="/Products">
+              <ReactBootStrap.Nav.Link href="#Products" style={{ color: 'black' }}  onClick={()=>Navigate("Productsales")}  >Products </ReactBootStrap.Nav.Link>
+            </Link>
+            <Link to="/Products">
+              <ReactBootStrap.Nav.Link href="#Brands" style={{ color: 'black' }}  onClick={()=>Navigate("")}  >Brands </ReactBootStrap.Nav.Link>
+            </Link>
+            <Link to="/Home">
+              <ReactBootStrap.Nav.Link href="#Home" style={{ color: 'black' }} onClick={()=>Navigate("Home")}>Home</ReactBootStrap.Nav.Link>
+            </Link>
+           
+
+
+          </ReactBootStrap.Nav>
+          <ReactBootStrap.Nav>
+            <Link to="/Aout ">
+              <ReactBootStrap.Nav.Link  style={{ color: 'black' }}  onClick={()=>Navigate("About")} >About </ReactBootStrap.Nav.Link>
+            </Link>
+            <Link to="/Contact">
+              <ReactBootStrap.Nav.Link eventKey={2} style={{ color: 'black' }}  onClick={()=>Navigate("contact")}>
+                Contact
+              </ReactBootStrap.Nav.Link>
+            </Link>
+          </ReactBootStrap.Nav>
+        </ReactBootStrap.Navbar.Collapse>
         
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="navbarScroll" />
-      <Navbar.Collapse id="navbarScroll">
-        <Nav
-          className="me-auto my-2 my-lg-0"
-          style={{ maxHeight: '100px' }}
-          navbarScroll
-        >
-           <Nav.Link  onClick={()=>navigate("Productlist")}>Home</Nav.Link>
-          <Nav.Link  onClick={()=>navigate("about")}>About</Nav.Link>
-          <Nav.Link  onClick={()=>navigate("contact")}>contact</Nav.Link>
-          
-          
-        </Nav>
-        {/* <Form className="d-flex justify-content-center">
-          <Form.Control
-            type="search"
-            placeholder="Search"
-            className="me-2"
-            aria-label="Search"
-          />
-          <Button variant="outline-success">Search</Button>
-        </Form> */}
-        <FaSearch
-            size={"18"}
-            color="black"
-            style={{ cursor: "pointer" }}
-            onClick={handleSearchClick} // Appel de la fonction lorsque l'utilisateur clique sur l'icône
-          />
-        <CiShoppingCart size={"30"} color='black'/>
-        <CgProfile size={"20"} color='black' onClick={()=>navigate("auth")} />
-       
+
+        <div className='tn-icons mb-3'>
+        <a className='login' href=""><RiUserFill onClick={()=>Navigate("/Auth")} /></a>
+        <a className='fav-icon' href=""><RiHeartFill    onClick={()=>Navigate("Wishlist")}/></a>
+        <a className='cart-icon' href=""><RiShoppingCart2Fill   onClick={()=>Navigate("Check")}/></a>
+
+      </div>
+      </ReactBootStrap.Navbar>
      
 
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
-  );
+    </div>
+
+    // </div >
+    
+  )
 }
 
-export default CusNavbar;
+export default NavBar;

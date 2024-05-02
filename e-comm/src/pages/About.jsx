@@ -1,82 +1,39 @@
+
 import React from 'react';
-import './About.css'; // Assurez-vous d'avoir le fichier style.css dans votre projet
+import "./About.css"
+const AboutSection = () => {
+    return (
+        <section className="about">
+            <h1>About Us</h1>
+            <p style={{ fontWeight: 'bold' }}>
+                Here the story of k-Glow..
+            </p>
+            <div className="about-info">
+                <div className="about-img">
+                    <img src="https://media.glamourmagazine.co.uk/photos/651be3e607b726a3ee5c7011/16:9/w_2580,c_limit/korean%20skincare%2012.1k%20031023%204%20COPY_L.jpg" />
+                </div>
+                <div>
+                    <p>Chez K-Glow, nous croyons en la puissance transformative des soins de la peau coréens. Fondé par des passionnés de la beauté, notre site e-commerce est dédié à fournir à nos clients une sélection exclusive des meilleurs produits de soins de la peau coréens.
+                        Notre mission est de révéler la beauté naturelle de votre peau en proposant des produits de qualité supérieure, formulés avec des ingrédients naturels et innovants. Nous nous engageons à vous offrir une expérience de soin de la peau holistique, où l'efficacité, la sécurité et l'éthique sont au cœur de tout ce que nous faisons.
+                    </p>
+                    {/* <button>Read More...</button> */}
+                </div>
+            </div >
+            <div className="about-info">
+                <div className="about-img">
+                    <img src="https://images-stylist.s3-eu-west-1.amazonaws.com/app/uploads/2021/01/25171501/best-korean-skincare-products.png" />
+                </div>
+                <div>
+                    <p>At K-Glow, our mission is to empower individuals worldwide to discover the transformative power of Korean skincare and embrace their unique beauty with confidence and joy.
 
-const AboutUs = () => {
-  return (
-    <div>
-      
+                        We are committed to providing our customers with access to the highest quality skincare products, meticulously curated to harness the time-tested traditions and cutting-edge innovations of Korean beauty.
+                    </p>
+                  
+                </div>
+            </div >
 
-      <section className="about">
-        <h1>About Us</h1>
-        <p style={{ fontWeight: 'bold' }}>K-Glow.....</p>
-        <div className="about-info">
-          <div className="about-img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-hIbFZhb54783YzsHHTFR-Hnp5Nd_hiIRAmICpfK3Jg&s" alt="Geeksforgeeks" />
-          </div>
-          <div>
-            <p>Bienvenue sur notre site e-commerce dédié aux produits de soins coréens ! Plongez dans l'univers de la beauté coréenne et découvrez une vaste sélection de produits de soins de la peau provenant directement de Corée du Sud. Notre boutique en ligne offre une expérience de shopping unique, mettant en avant les meilleurs produits de marques réputées pour leur qualité et leur efficacité.</p>
-         
-          </div>
-        </div>
-      </section>
-      
-      <section className="about">
-        <h1>Our Mission</h1>
-        <p style={{ fontWeight: 'bold' }}>K-Glow.....</p>
-        <div className="about-info">
-          <div className="about-img">
-            <img src="https://timesofindia.indiatimes.com/photo/104473165/104473165.jpg" alt="Geeksforgeeks" />
-          </div>
-          <div>
-            <p>Bienvenue sur notre site e-commerce dédié aux produits de soins coréens ! Plongez dans l'univers de la beauté coréenne et découvrez une vaste sélection de produits de soins de la peau provenant directement de Corée du Sud. Notre boutique en ligne offre une expérience de shopping unique, mettant en avant les meilleurs produits de marques réputées pour leur qualité et leur efficacité.</p>
-         
-          </div>
-        </div>
-      </section>
-
-
-      <section className="team">
-        <h1>Meet Our Team</h1>
-        <div className="team-cards">
-          {/* Card 1 */}
-          <div className="cardd">
-            <div className="card-img">
-              <img src="https://scontent.ftun14-1.fna.fbcdn.net/v/t39.30808-6/331077014_1199203944295261_8523133215185294315_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=7s9mnOI5GAMAX9I6J5X&_nc_ht=scontent.ftun14-1.fna&oh=00_AfCwGIKkXKNUTI90f1-jeskStm6ujte6qbmw-aBTRbtwCg&oe=66122B13" alt="User 1" />
-            </div>
-            <div className="card-info">
-              <h2 className="card-name">Chebbi Eya</h2>
-              <p className="card-role">CEO and Founder</p>
-            
-            </div>
-          </div>
-          {/* Card 2 */}
-          <div className="cardd">
-            <div className="card-img">
-              <img src="https://scontent.ftun14-1.fna.fbcdn.net/v/t39.30808-6/414495882_2336161846579155_2915138723357318010_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=m8AvGPnf9X8AX_gVzWB&_nc_ht=scontent.ftun14-1.fna&oh=00_AfA3xAyypgFoNy4nDgftEciUSJorS3OXI7RGdploP7u-QA&oe=6612454A" alt="User 2" />
-            </div>
-            <div className="card-info">
-              <h2 className="card-name">Jouini Eya</h2>
-              <p className="card-role">Co-Founder</p>
-           
-            </div>
-          </div>
-          {/* Card 3 */}
-          <div className="cardd">
-            <div className="card-img">
-              <img src="https://scontent.ftun14-1.fna.fbcdn.net/v/t39.30808-6/376730335_1815847255513728_3693653158964586519_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=c1cT07Xt6McAX_BwTRb&_nc_ht=scontent.ftun14-1.fna&oh=00_AfDVGWdl_lXg1WpEnZo27R_-_n9Ly1-Q2GdSzdkeKEvHCQ&oe=661235F0" alt="User 3" />
-            </div>
-            <div className="card-info">
-              <h2 className="card-name">Khabouchi Rawaa</h2>
-              <p className="card-role">Co-Founder</p>
-           
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
-    </div>
-  );
+        </section >
+    );
 }
 
-export default AboutUs;
+export default AboutSection;

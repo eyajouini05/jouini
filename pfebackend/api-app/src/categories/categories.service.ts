@@ -12,6 +12,7 @@ export class CategoriesService {
       data: createCategoryDto,
     });
   }
+  
 
   async findAll() {
     return this.prisma.category.findMany();

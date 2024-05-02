@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { ProductsService } from './products.service';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
+import { title } from 'process';
 
 @Controller('products')
 export class ProductsController {
@@ -12,12 +13,16 @@ export class ProductsController {
     return this.productsService.create(createProductDto);
   }
 
+  @Get(":title")
+  findAllByC(@Param('title') title: string) {
+    return this.productsService.findAllByCateg(title);
+  }
   @Get()
   findAll() {
     return this.productsService.findAll();
   }
 
-  @Get(':id')
+  @Get('/findone/:id')
   findOne(@Param('id') id: string) {
     return this.productsService.findOne(+id);
   }

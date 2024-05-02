@@ -1,9 +1,4 @@
-/* Home.css */
-
-.home-background {
-    background-image: url('');
-    background-size: cover;
-    background-position: center;
+* {
+    border: none;
   }
-  
-  
+  /* Supprimer les bordures de certains éléments spécifiques */

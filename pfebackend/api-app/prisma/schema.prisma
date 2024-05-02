@@ -14,56 +14,96 @@ datasource db {
 }
 
 model Products {
-  id          Int     @id @default(autoincrement())
-  productName String
-  description String? @db.Text
-  price       Float
+  id            Int          @id @default(autoincrement())
+  productName   String
+  description   String?      @db.Text
+  price         Float
+  imageUrl      String
+  Order         Order[]
+  Category      Category?    @relation(fields: [categoryId], references: [id])
+  categoryId    Int?
+  review        Review[]
+  SubCategory   SubCategory? @relation(fields: [subCategoryId], references: [id])
+  subCategoryId Int?
+}
 
-  Order      Order[]
-  Category   Category? @relation(fields: [categoryId], references: [id])
-  categoryId Int?
-  review     Review[]
+model employees {
+  id          Int    @id @default(autoincrement())
+  fullname    String
+  age         String
+  adresse     String
+  mobilephone String
 
-  // Promotion   Promotion? @relation(fields: [promotionId], references: [id])
-  // promotionId Int?
+  email String
+}
+model clients {
+  id          Int    @id @default(autoincrement())
+  fullname    String
+  age         String
+  adresse     String
+  mobilephone String
+password String
+  email String
 }
 
 model users {
+  id Int @id @default(autoincrement())
 
-  id       Int    @id @default(autoincrement())
-  
-  email String@unique
+  email String @unique
 
-  fullname String
-  age Int
-  adresse String
+  fullname    String
+  age         Int
+  adresse     String
   mobilephone String
-  Password String
+  Password    String
 
-  // Bookmark      Bookmark?    @relation(fields: [bookmarkId], references: [id])
-  // bookmarkId    Int?
-  // Reclamation   Reclamation? @relation(fields: [reclamationId], references: [id])
-  // reclamationId Int?
-  reviews       Review[]
+  reviews Review[]
 }
 
 model Order {
   id          Int        @id @default(autoincrement())
-  orderNumber String    
+  orderNumber String
   price       Float
   products    Products[]
 }
 
+model ProductsTrending {
+  id             Int    @id @default(autoincrement())
+  image          String
+  title          String
+  previous_price String
+  current_price  String
+  description    String
+}
+
+model Packs {
+  id    Int    @id @default(autoincrement())
+  image String
+  title String
+  price String
+}
+
 model Category {
-  id          Int        @id @default(autoincrement())
-  name        String     
- 
+  id       Int    @id @default(autoincrement())
+  name     String
+  imageUrl String
+
   products    Products[]
+  subCategory SubCategory[]
+}
+
+model SubCategory {
+  id         Int        @id @default(autoincrement())
+  name       String
+  imageUrl   String
+  products   Products[]
+  Category   Category?  @relation(fields: [categoryId], references: [id])
+  categoryId Int?
 }
 
 model Review {
   id      Int    @id @default(autoincrement())
-  
+  name    String
   content String
   rating  String
 
@@ -72,26 +112,3 @@ model Review {
   users      users?    @relation(fields: [usersId], references: [id])
   usersId    Int?
 }
-
-// model Bookmark {
-//   id    Int     @id @default(autoincrement())
-//   users users[]
-// }
-
-// model Reclamation {
-//   id          Int     @id @default(autoincrement())
-//   title       String
-//   description String
-//   status      String
-//   users       users[]
-// }
-
-// model Promotion {
-//   id          Int      @id @default(autoincrement())
-//   code        String   @unique
-//   description String
-//   discount    Float
-//   startDate   DateTime
-//   endDate     DateTime
-//   // products    Products[]
-// }

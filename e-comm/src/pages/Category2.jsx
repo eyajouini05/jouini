@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import "./category.css"
+import "./category2.css"
 import { FaArrowRight } from "react-icons/fa";
 const categories = [
   { id: 1, name: 'Acne', image: 'https://thekshop.ca/cdn/shop/collections/12_1024x1024_e5f7e072-eebd-4bbc-a29c-d55a6579b71e_535x.png?v=1636335737' },
@@ -22,7 +22,9 @@ const ShopByCategory = () => {
 
   return (
     <Container>
-      <h1 className="text-center mt-5 ">Shop by skin concern</h1>
+
+<h1 className="shop-by-title text-center mt-5">Shop by skin concern</h1>
+      
       <Row className="mt-4 ">
     
 

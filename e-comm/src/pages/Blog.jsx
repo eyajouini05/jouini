@@ -1,7 +1,9 @@
 import React from 'react';
 import "./Blog.css"; 
+import { useNavigate } from 'react-router-dom';
 
 const BlogSection = () => {
+    const Navigate=useNavigate()
     return (
         <section className="section gray-bg" id="blog">
             <div className="container">
@@ -27,7 +29,7 @@ const BlogSection = () => {
                                 <p>Type in the words “gua sha” on TikTok, and videos of people’s transformative face lifts and glowing skin flood the screen. </p>
                                 <div className="btn-bar">
                                     <a href="#" className="px-btn-arrow">
-                                        <span>Read More</span>
+                                        <span  onClick={()=>Navigate("Read1")}>Read More</span>
                                         <i className="arrow"></i>
                                     </a>
                                 </div>
@@ -47,7 +49,7 @@ const BlogSection = () => {
                                 <p>. It’s that time of year again when we all make and break habits over bubbling champagne</p>
                                 <div className="btn-bar">
                                     <a href="#" className="px-btn-arrow">
-                                        <span>Read More</span>
+                                        <span onClick={()=>Navigate("Read2")}>Read More</span>
                                         <i className="arrow"></i>
                                     </a>
                                 </div>
@@ -67,7 +69,7 @@ const BlogSection = () => {
                                 <p>Zits. Pimples. Blemishes. Spots. Acne goes by numerous names and manifests itself in many different ways med bumps.</p>
                                 <div className="btn-bar">
                                     <a href="#" className="px-btn-arrow">
-                                        <span>Read More</span>
+                                        <span onClick={()=>Navigate("Read3")}>Read More</span>
                                         <i className="arrow"></i>
                                     </a>
                                 </div>

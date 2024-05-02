@@ -3,7 +3,7 @@ import { MDBInput, MDBCheckbox, MDBBtn, MDBTextArea } from 'mdb-react-ui-kit';
 import "../assets/css/contact.css"
 export default function App() {
   return (
-    <div class="contact2" style={{ backgroundImage: "url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/map.jpg",marginBottom:"300px" }} id="contact">
+    <div class="contact2" style={{ backgroundImage: "url(https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/map.jpg", marginBottom: "300px" }} id="contact">
       <div class="container">
         <div class="row contact-container">
           <div class="col-lg-12">
@@ -40,7 +40,12 @@ export default function App() {
                           </div>
                         </div>
                         <div class="col-lg-12">
-                          <button type="submit" class="btn btn-danger-gradiant mt-3 mb-3 text-white border-0 py-2 px-3"><span> SUBMIT NOW <i class="ti-arrow-right"></i></span></button>
+                  
+
+                          <button type="submit" class="btn btn-danger-gradiant mt-3 mb-3 text-white border-0 py-2 px-3" >
+                            <span style={{ width: '200px', height: '10px' }} >SUBMIT NOW <i class="ti-arrow-right"></i ></span ></button >
+                             
+
                         </div>
                       </div>
                     </form>

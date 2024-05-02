@@ -7,6 +7,9 @@
     transform: scale(1.05)
   }
   
+.shop-by-title {
+  font-size: 25px; /* Changer la taille de la police selon vos besoins */
+}
   .brand-title {
     position: absolute;
     display: flex;
@@ -22,6 +25,7 @@
     width: 100%; 
     margin-top: 30px;
     padding: 20px;
+    font-size: 18px;
   }
   .photoglow .glow-wrap {
     overflow: hidden;

@@ -7,6 +7,11 @@
   transform: scale(1.05)
 }
 
+
+.shop-by-title {
+  font-size: 30px; /* Changer la taille de la police selon vos besoins */
+}
+
 .category-title {
   position: absolute;
   display: flex;
@@ -17,12 +22,15 @@
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.8); 
   padding: 10px;
-  text-align: center;
+  text-align: left;
   z-index: 1; 
   width: 100%; 
   margin-top: 30px;
   padding: 20px;
+  font-size: 18px; /* Changer la taille de la police */
+  color: #333; /* Changer la couleur du texte */
 }
+
 .photoglow .glow-wrap {
   overflow: hidden;
   position: absolute;

@@ -13,7 +13,7 @@ import { BrowserRouter, Outlet } from "react-router-dom";
 import Login from './auth/Login';
 import SignUp from './auth/Signup';
 
-import Cart from './layouts/Cart';
+import Check from './pages/Check';
 import Home from './pages/Home';
 
 
@@ -28,12 +28,12 @@ import CusNavbar from './layouts/Navbar';
 import Featuredproducts from './components/ProductDetail';
 import Slider from "./pages/Slider";
 // import Productsales from './pages/Productsales';
-import Trendingproducts from"./pages/Trendingproducts";
-import Blog from"./pages/Blog";
-import Addtocard from"./components/ProductDetail";
+import Trendingproducts from "./pages/Trendingproducts";
+import Blog from "./pages/Blog";
+import Addtocard from "./components/ProductDetail";
 import Testimonials from './pages/Testimonials';
 
-import Category from"./pages/Category";
+import Category from "./pages/Category";
 
 export default function App() {
   return (
@@ -44,17 +44,17 @@ export default function App() {
       <div>
         {/* <Cart/> */}
         {/* <Addtocard/> */}
-  <CusNavbar />
-{/* <Testimonials/> */}
-{/* <Category/> */}
+        <CusNavbar />
+        {/* <Testimonials/> */}
+        {/* <Category/> */}
         <Outlet />
         <Footer />
-  {/* <Slider/> */}
-{/* <Blog/> */}
-{/* <Featuredproducts/> */}
-{/* <Trendingproducts/> */}
-{/* <About/> */}
-{/* <Addtocard/> */}
+        {/* <Slider/> */}
+        {/* <Blog/> */}
+        {/* <Featuredproducts/> */}
+        {/* <Trendingproducts/> */}
+        {/* <About/> */}
+        {/* <Addtocard/> */}
       </div>
     </Provider>
 

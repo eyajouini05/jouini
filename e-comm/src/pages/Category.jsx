@@ -19,7 +19,10 @@ const ShopByCategory = () => {
 
   return (
     <Container>
-      <h1 className="text-center mt-5 ">Shop by skin type</h1>
+ 
+
+<h1 className="shop-by-title text-center mt-5">Shop by skin type</h1>
+
       <Row className="mt-4 ">
     
 
